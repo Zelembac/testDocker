@@ -86,7 +86,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Set working directory
+# Set working directory
 WORKDIR /sheep
+
+# Verify the existence of files in the build context
+RUN ls -l /
 
 # Copy startapp.sh script
 COPY startapp.sh /startapp.sh
