@@ -1,3 +1,4 @@
+FROM ubuntu:22.04
 ARG RELEASE
 ARG LAUNCHPAD_BUILD_ARCH
 LABEL org.opencontainers.image.ref.name=ubuntu
