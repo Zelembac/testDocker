@@ -15,8 +15,8 @@ jobs:
         ref: 'master'
     - name: Build the Docker image
       env:
-        HUB_NAME: ${{ secrets.DOCKER_NAME }}
-        HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
+        HUB_NAME: lazardj
+        HUB_KEY: dckr_pat_-WjYCfSXRgsmhehmkWig48JO61g
       run: |
         docker login -u $HUB_NAME -p $HUB_KEY
         docker build . --pull --no-cache --file Dockerfile --tag zocker160/sheepit-client:latest
@@ -35,8 +35,8 @@ jobs:
         ref: 'master'
     - name: Build the Docker image
       env:
-        HUB_NAME: ${{ secrets.DOCKER_NAME }}
-        HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
+        HUB_NAME: lazardj
+        HUB_KEY: dckr_pat_-WjYCfSXRgsmhehmkWig48JO61g
       run: |
         docker login -u $HUB_NAME -p $HUB_KEY
         docker build . --pull --no-cache --file Dockerfile.vast --tag zocker160/sheepit-client:vast
